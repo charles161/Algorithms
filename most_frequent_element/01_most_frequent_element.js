@@ -5,7 +5,7 @@ let most_frequent = arr => {
 
     arr.forEach(e => {
         if (!hash.hasOwnProperty(e)) {
-            hash[e] = 0;
+            hash[e] = 0; //logic is different in Java file.. check it out
         }
         hash[e]++;
         if (hash[e] > max_count) {
