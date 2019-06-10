@@ -1,10 +1,10 @@
 let most_frequent = arr => {
-    let hash = [],
+    let hash = {},
         max_count = -1,
         max_item;
 
     arr.forEach(e => {
-        if (!hash[e]) {
+        if (!hash.hasOwnProperty(e)) {
             hash[e] = 0;
         }
         hash[e]++;
@@ -13,8 +13,9 @@ let most_frequent = arr => {
             max_item = e;
         }
     });
+    console.log(hash);
 
     return max_item;
 };
 
-console.log(most_frequent([6, 7, 8]));
+console.log(most_frequent([6, 7, 8, 8]));
