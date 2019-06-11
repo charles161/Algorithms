@@ -8,13 +8,13 @@ function one_away(s1, s2) {
             if (s1[p1] == s2[p2]) {
                 p1++;
                 p2++;
-                flag = 0;
+                //flag = 0;
             } else {
-                if (flag == 1) {
-                    return false;
-                }
+                // if (flag == 1) {
+                //     return false;
+                // }
                 count++;
-                flag = 1;
+                //flag = 1;
                 if (s1.length == s2.length) {
                     p1++;
                     p2++;
@@ -25,9 +25,9 @@ function one_away(s1, s2) {
                 }
             }
         }
-        if (count == 1) return true;
+        if (count <= 1) return true;
         else return false;
     }
 }
 
-console.log(one_away("abdc", "abc").toString());
+console.log(one_away("abbdc", "abcdc").toString());
