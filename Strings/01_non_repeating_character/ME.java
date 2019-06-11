@@ -25,10 +25,10 @@ public class ME {
   for (Character entry : cool) {
    System.out.println(entry + ":" + count.get(entry));
    if (count.get(entry) == 1) {
-    result.add(entry);
+    return entry;
    }
   }
 
-  return result.size() > 0 ? result.get(0) : ':';
+  return ':';
  }
 }
