@@ -9,7 +9,6 @@ public class ME {
  }
 
  public static Character non_repeating(String str) {
-  ArrayList<Character> result = new ArrayList<Character>();
   ArrayList<Character> cool = new ArrayList<Character>();
 
   HashMap<Character, Integer> count = new HashMap<Character, Integer>();
