@@ -17,8 +17,8 @@ function click(arr, nr, nc, i, j) {
   for (let k = i - 1; k <= i + 1; k++)
    for (let l = j - 1; l <= j + 1; l++) {
     if (k >= 0 && k < nr && l >= 0 && l < nc) {
-     if (!((k == (i + 1) && l == (j + 1)) || (k == (i - 1) && l == (j - 1)) || (k == (i + 1) && l == (j - 1)) || (k == (i - 1) && l == (j + 1))))
-      click(arr, nr, nc, k, l)
+     // if (!((k == (i + 1) && l == (j + 1)) || (k == (i - 1) && l == (j - 1)) || (k == (i + 1) && l == (j - 1)) || (k == (i - 1) && l == (j + 1))))  // this is for not expanding diagonally
+     click(arr, nr, nc, k, l)
     }
    }
   return arr;
@@ -52,6 +52,6 @@ function mine_sweeper(bombs, nr, nc) {
  return arr;
 }
 
-let arr = mine_sweeper([[2, 2]], 3, 5)
-console.log(click(arr, 3, 5, 0, 1))
+let arr = mine_sweeper([[3, 3], [0, 0]], 4, 4)
+console.log(click(arr, 4, 4, 0, 1))
 
