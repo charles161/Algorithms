@@ -48,7 +48,6 @@ function mine_sweeper(bombs, nr, nc) {
 
  //  }
  // }
-
  return arr;
 }
 
