@@ -21,11 +21,11 @@ function rotate_in(arr, n) {
    let tmp = [-1, -1, -1, -1];
    ci = i;
    cj = j;
-   for (k = 0; k <= 3; k++) {
+   for (k = 0; k <= n; k++) {
     tmp[k] = arr[ci][cj];
     [ci, cj] = rotate_sub(ci, cj, n);
    }
-   for (k = 0; k <= 3; k++) {
+   for (k = 0; k <= n; k++) {
     arr[ci][cj] = tmp[(k + 3) % 4];
     [ci, cj] = rotate_sub(ci, cj, n);
    }
