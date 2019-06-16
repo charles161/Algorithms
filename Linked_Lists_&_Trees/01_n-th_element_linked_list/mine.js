@@ -106,3 +106,20 @@ function deleteAt(index) {
  }
 }
 
+function deleteAllOfSameValue(value) {
+ let temp = Head
+ let prev = null;
+ while (temp) {
+  if (temp.value == value) {
+   if (!prev) {
+    Head = Head.child
+   }
+   else {
+    prev.child = temp.child
+   }
+  }
+  prev = temp
+  temp = temp.child
+ }
+}
+
